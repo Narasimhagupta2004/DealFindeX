@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+
+h2{
+    font-size: 46px;
+    color: black;
+}
+
+h4{
+    font-size: 20px;
+    color:black;
+}
+
+h6{
+    font-size: 12px;
+    color: black;
+}
+
+p{
+    font-size: 16px;
+}
+
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: rgb(214, 184, 214);
+    position: sticky;
+}
+#header img{
+    width: 150px;
+}
+
+#header .searchbar{
+    background-color: rgb(214, 184, 214);
+    background-size: cover;
+}
+
+#header .searchbar  .searcharea{
+    width: 250px;
+    height: 30px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0px 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600px;
+    color: red;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover{
+    border: 2px solid orangered;
+    color: orangered;
+}
+
+#main h2{
+    margin-top: 3px;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.form{
+    height: 300px;
+    width: 100vh;
+    background-size: cover;
+    background-color: aquamarine;
+    justify-content: center;
+    text-align: center;
+}
+.form p{
+    padding: 8px;
+}
+
+.btn button{
+    margin-right: 15pxs;
+}
+
+.form input:hover, .form button:hover{
+    cursor: pointer;
+    border: 1px sloid black;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.information{
+    display: flex;
+    justify-content: space-evenly;
+    text-align:center ;
+    margin-top: 2px;
+}
+.user-info h4{
+    background-color: rgb(172, 247, 97);
+    height: 40px;
+}
+.company-Info h4{
+        background-color: rgb(236, 236, 112);
+        height: 40px;
+}
+.company-Info{
+    background-color:rgb(160, 233, 208);
+}
+
+.company-Info p{
+    padding-top: 25px;
+    font-size: large;
+}
+
+.address{
+    padding-top: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: lemonchiffon;
+}
+.address-info{
+   
+    padding-top: 25px;
+    text-align: center;
+}
+.contact-info{
+    padding-top: 25px;
+    text-align: center;   
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: lightslategrey;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+
+footer .col a{
+    color: black;
+    text-decoration: none;
+}

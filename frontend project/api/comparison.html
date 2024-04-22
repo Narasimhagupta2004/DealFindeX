@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Price Comparison</title>
+</head>
+<body>
+    <!-- Your HTML content here -->
+
+    <script>
+        // Paste the JavaScript code here
+
+        async function getProductInfo(productName) {
+            // Replace API endpoints with actual ones
+            const amazonUrl = `https://api.example.com/amazon/products?q=${productName}`;
+            const flipkartUrl = `https://api.example.com/flipkart/products?q=${productName}`;
+            const ajioUrl = `https://api.example.com/ajio/products?q=${productName}`;
+            const myntraUrl = `https://api.example.com/myntra/products?q=${productName}`;
+
+            const [amazonResponse, flipkartResponse, ajioResponse, myntraResponse] = await Promise.all([
+                fetch(amazonUrl).then(response => response.json()),
+                fetch(flipkartUrl).then(response => response.json()),
+                fetch(ajioUrl).then(response => response.json()),
+                fetch(myntraUrl).then(response => response.json())
+            ]);
+
+            return { amazon: amazonResponse, flipkart: flipkartResponse, ajio: ajioResponse, myntra: myntraResponse };
+        }
+
+        function comparePrices(amazonPrice, flipkartPrice, ajioPrice, myntraPrice) {
+            const prices = {
+                'Amazon': amazonPrice,
+                'Flipkart': flipkartPrice,
+                'Ajio': ajioPrice,
+                'Myntra': myntraPrice
+            };
+            const minPrice = Math.min(...Object.values(prices));
+            const minSite = Object.keys(prices).find(key => prices[key] === minPrice);
+            return { minSite, minPrice };
+        }
+
+        async function compareProductPrices(productName) {
+            try {
+                const { amazon, flipkart, ajio, myntra } = await getProductInfo(productName);
+
+                const amazonPrice = amazon.price;
+                const flipkartPrice = flipkart.price;
+                const ajioPrice = ajio.price;
+                const myntraPrice = myntra.price;
+
+                const { minSite, minPrice } = comparePrices(amazonPrice, flipkartPrice, ajioPrice, myntraPrice);
+
+                console.log(`The lowest price for ${productName} is ${minPrice} on ${minSite}.`);
+            } catch (error) {
+                console.error('Error fetching product information:', error);
+            }
+        }
+
+        // Example usage
+        compareProductPrices("iPhone 12");
+    </script>
+</body>
+</html>

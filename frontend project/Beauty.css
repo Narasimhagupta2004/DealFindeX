@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+
+h2{
+    font-size: 46px;
+    color: black;
+}
+
+h4{
+    font-size: 20px;
+    color:black;
+}
+
+h6{
+    font-size: 12px;
+    color: black;
+}
+
+p{
+    font-size: 16px;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color:  #37475A;
+    position: sticky;
+}
+#header img{
+    width: 150px;
+}
+
+#header .searchbar{
+    background-color: red;
+    background-size: cover;
+}
+
+#header .searchbar  .searcharea{
+    width: 250px;
+    height: 30px;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0px 20px;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600px;
+    color: red;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover{
+    color: white;
+}
+
+#item{
+    display: flex;
+    justify-content: space-evenly;
+    text-align:center;
+}
+.category-list{
+    background-color: rgb(27, 21, 66);
+    width: 20vh;
+    height: 550px;
+}
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+.category-list a{
+    text-decoration: none;
+    margin: 0px 8px;
+    border-radius: 4px;
+    color: white;
+    border: 1px solid black;
+}
+.category-list a:hover{
+    color: black;
+}
+.products{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+.pro img{
+    width: 150px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pro{
+    width: 23%;
+    min-width: 200px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+     background-color: lightslategrey;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+
+footer .col a{
+    color: black;
+    text-decoration: none;
+}
