@@ -1,2 +1,2 @@
 # DealFindeX
-it based only frontend only
+it based on frontend only
